@@ -1,0 +1,36 @@
+// Colors
+$white: #ffffff;
+$black: #1A1A1D;
+$light-black: #3a3a42;
+$gray: #4E4E50;
+
+$primary-color: #C3073F;
+$secondary-color: #6F2232;
+
+// Global Styles
+html {
+  font-size: 18px !important;
+  font-family: 'Noto Sans', sans-serif !important;
+  color: $black !important;
+  height: 100%;
+  background-color: $light-black;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
+// Mixins
+@mixin container {
+  margin-left: 15%;
+  margin-right: 15%;
+}

@@ -1,0 +1,41 @@
+.header {
+  background-color: $black;
+
+  &__container {
+    @include container;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    color: $white;
+    padding: 1.3rem;
+    font-size: 1.5rem;
+  }
+
+  &__highlight {
+    color: $primary-color;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+
+    li {
+      margin-right: 1rem;
+      margin-left: 1rem;
+
+      &:first-child {
+        margin-right: 1rem;
+        margin-left: 0;
+      }
+      &:last-child{
+        margin-right: 0;
+        margin-left: 1rem;
+      }
+    }
+  }
+}

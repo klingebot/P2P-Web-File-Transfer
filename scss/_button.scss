@@ -1,0 +1,21 @@
+.button {
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  padding: 7px 20px;
+
+  &--primary {
+    color: $white;
+    background-color: $primary-color;
+  }
+
+  &--secondary {
+    color: $white;
+    background-color: $secondary-color;
+  }
+
+  &:hover {
+    background-color: $secondary-color;
+    transition: 0.2s;
+  }
+}

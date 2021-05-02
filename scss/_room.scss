@@ -1,0 +1,98 @@
+.room {
+  color: $white;
+  margin-top: 2.5rem;
+  .file-drop {
+    @include container;
+    background-color: $black;
+
+    form {
+      display: flex;
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+      justify-content: flex-end;
+      margin-right: 1.5rem;
+
+      a {
+        border-radius: 0;
+      }
+
+      input {
+        flex-grow: 1;
+      }
+    }
+
+  }
+
+  .chat {
+    @include container;
+
+    &__msg-global {
+      color: #FFBABA;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    &__msg-self {
+      color: $white;
+      text-align: right;
+    }
+
+    &__msg-other {
+      color: #DFF2BF;
+      text-align: left;
+    }
+
+    &__history{
+      background-color: $black;
+      padding: 1rem;
+      overflow: auto;
+      height: 600px;
+
+      a {
+        text-decoration: underline;
+        color: inherit;
+      }
+
+      p {
+        font-size: 0.75rem;
+      }
+
+      li {
+        list-style-type: none;
+
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        &:first-child {
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+        }
+
+        &:last-child {
+          margin-top: 0.5rem;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: row;
+
+      input {
+        flex-grow: 1;
+        outline: none;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+      }
+
+      a {
+        background-color: $primary-color;
+        border-radius: 0;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        cursor: pointer;
+      }
+    }
+  }
+}

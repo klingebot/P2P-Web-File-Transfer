@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <%- include('partials/doctype') %>
+  </head>
+  <body>
+  <%- include('partials/header') %>
+  <main class="content">
+    <div class="homepage">
+      <div class="homepage__container">
+        <h1>D3X File Transfer</h1>
+        <p>Share files without a middleman</p>
+        <h3>Get Started</h3>
+        <div class="homepage__button-flex">
+          <a id="joinRoom" class="button button--primary" href="#">Join a Room</a>
+          <a class="button button--primary" href="/create">Create a Room</a>
+        </div>
+        <div class="homepage__input">
+          <p>Enter your room uuid below</p>
+          <input id="code" for="code" type="text"></input>
+          <a id="input" class="button button--primary" href="#">Submit</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <%- include('partials/footer') %>
+  <script type='text/javascript'>
+    $(document).ready(function() {
+      $('#joinRoom').click(function(){
+        $('.homepage__input').slideDown();
+      });
+
+      $('#input').click(function(){
+        var uuid = $('#code').val()
+        window.location.href = `/room/${uuid}`;
+      })
+    });
+  </script>
+  </body>
+</html>
