@@ -27,7 +27,15 @@ app.get('/create', (req, res) => {
 
 // Render a room with the ID passed through to the client
 app.get('/room/:room', (req, res) => {
-  res.render('room', { roomId: req.params.room });
+  const v4 = new RegExp(/^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i);
+  var room = req.params.room;
+
+  // Ensure rooms are being made correctly (uuid for some security)
+  if(room.match(v4)){
+    res.render('room', { roomId: room });
+  } else {
+    res.redirect('/');
+  }
 });
 
 io.on('connection', (socket) => {
