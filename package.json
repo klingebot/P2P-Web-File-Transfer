@@ -2,7 +2,7 @@
   "name": "P2P Web File Transfer",
   "version": "1.0.0",
   "description": "P2P Web File Transfer using WebRTC, wrapped in PeerJS",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "dev": "echo \"Starting server...\" && node server.js & echo \"Compiling assets...\n\" && node-sass -w --include-path scss scss/index.scss public/css/style.css",
     "prod": "echo \"Compiling assets...\n\" && node-sass --include-path scss scss/index.scss public/css/style.css --output-style compressed && echo \"Starting Server...\n\" && node server.js"
